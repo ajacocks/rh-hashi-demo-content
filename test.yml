@@ -9,16 +9,16 @@
       setup:
       register: result
 
-    - name: Debug
-      debug:
-        var: result
+#    - name: Debug
+#      debug:
+#        var: result
 
     - name: Here are the variables that we were passed
       debug:
         msg:
-          - "{{ aws_access_key_id | default('unset') }}"
-          - "{{ aws_secret_access_key | default('unset') }}"
-          - "{{ gitlab_install_password | default('unset') }}"
-          - "{{ terraform_install_common_password | default('unset') }}"
+          - "aws_access_key_id: {{ aws_access_key_id | default('unset') }}"
+          - "aws_secret_access_key: {{ aws_secret_access_key | default('unset') }}"
+          - "gitlab_install_password: {{ gitlab_install_password | default('unset') }}"
+          - "terraform_install_common_password: {{ terraform_install_common_password | default('unset') }}"
 
 ...
