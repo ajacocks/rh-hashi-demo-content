@@ -1,0 +1,16 @@
+---
+
+- name: Debugging playbook
+  hosts: localhost
+
+  tasks:
+
+    - name: Show all content
+      setup:
+      register: result
+
+    - name: Debug
+      debug:
+        var: result
+
+...
