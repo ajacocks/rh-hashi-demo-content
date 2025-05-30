@@ -14,10 +14,11 @@
         var: result
 
     - name: Here are the variables that we were passed
-      msg:
-        - "{{ aws_access_key_id | default('unset') }}"
-        - "{{ aws_secret_access_key | default('unset') }}"
-        - "{{ gitlab_install_password | default('unset') }}"
-        - "{{ terraform_install_common_password | default('unset') }}"
+      debug:
+        msg:
+          - "{{ aws_access_key_id | default('unset') }}"
+          - "{{ aws_secret_access_key | default('unset') }}"
+          - "{{ gitlab_install_password | default('unset') }}"
+          - "{{ terraform_install_common_password | default('unset') }}"
 
 ...
